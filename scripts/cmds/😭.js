@@ -14,7 +14,7 @@ module.exports = {
  onChat: async function({ event, message, getLang }) {
  if (event.body && event.body.toLowerCase() === "😭") {
  return message.reply({
- body: "     「𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\n𝗠𝗗 𝗝𝗨𝗕𝗔𝗘𝗗 𝗔𝗛𝗠𝗘𝗗 𝗝𝗢𝗬 」",
+ body: "     「𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\n🆁🅾🅱🅸🆄🅻」",
  attachment: await global.utils.getStreamFromURL("https://drive.google.com/uc?id=1yV0qA5ZMyF_WFkgCcTyEmBxMSVIlbg5t")
  });
  }
