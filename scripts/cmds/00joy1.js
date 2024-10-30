@@ -1,6 +1,6 @@
  module.exports = {
  config: {
-	 name: "00joy1",
+	 name: "00robiul1",
 	 version: "1.0",
 	 author: "AceGun",
 	 countDown: 5,
@@ -12,10 +12,10 @@
 
  onStart: async function(){}, 
  onChat: async function({ event, message, getLang }) {
- if (event.body && event.body.toLowerCase() === "জয়") {
+ if (event.body && event.body.toLowerCase() === "রবিউল") {
  return message.reply({
- body: "     「জয় বস এখন কাজে বিজি আছেন যা বলার আমাকে বলতে পারেন🤗😚」",
- attachment: await global.utils.getStreamFromURL("https://i.imgur.com/BC9Qr14.jpeg")
+ body: "     「রবিউল বস এখন কাজে বিজি আছেন যা বলার আমাকে বলতে পারেন🤗😚」",
+ attachment: await global.utils.getStreamFromURL("https://i.imgur.com/SoUK0cq.mp4")
  });
  }
  }
