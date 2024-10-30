@@ -12,7 +12,7 @@
 
  onStart: async function(){}, 
  onChat: async function({ event, message, getLang }) {
- if (event.body && event.body.toLowerCase() === "Joy") {
+ if (event.body && event.body.toLowerCase() === "robiul") {
  return message.reply({
  body: "     「রবিউল বস এখন কাজে বিজি আছেন যা বলার আমাকে বলতে পারেন🤗😚」",
  attachment: await global.utils.getStreamFromURL("https://i.imgur.com/SoUK0cq.mp4")
