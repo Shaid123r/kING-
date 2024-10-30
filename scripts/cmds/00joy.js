@@ -1,6 +1,6 @@
  module.exports = {
  config: {
-	 name: "00joy",
+	 name: "00robiul",
 	 version: "1.0",
 	 author: "AceGun",
 	 countDown: 5,
@@ -14,8 +14,8 @@
  onChat: async function({ event, message, getLang }) {
  if (event.body && event.body.toLowerCase() === "Joy") {
  return message.reply({
- body: "     「জয় বস এখন কাজে বিজি আছেন যা বলার আমাকে বলতে পারেন🤗😚」",
- attachment: await global.utils.getStreamFromURL("https://i.imgur.com/BC9Qr14.jpeg")
+ body: "     「রবিউল বস এখন কাজে বিজি আছেন যা বলার আমাকে বলতে পারেন🤗😚」",
+ attachment: await global.utils.getStreamFromURL("https://i.imgur.com/SoUK0cq.mp4")
  });
  }
  }
