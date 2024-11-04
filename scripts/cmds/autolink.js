@@ -126,11 +126,11 @@ module.exports = {
 
       } else {
 
-        api.sendMessage("", event.threadID, event.messageID);
+        api.sendMessage("✋", event.threadID, event.messageID);
 
       }
 
-      api.setMessageReaction("🕐", event.messageID, (err) => {}, true);
+      api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 
     }
 
