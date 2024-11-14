@@ -32,7 +32,7 @@ const lang = languagesMap[shortLang] || "bangla";
 
 module.exports.config = {
   name: "bby",
-  aliases: ["bot"],
+  aliases: ["bby"],
   version: "1.0.0",
   role: 0,
   author: "ArYan 🤡",
