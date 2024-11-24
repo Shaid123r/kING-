@@ -1,30 +1,36 @@
-+cmd install file.js const fs = require('fs');
+const fs = require('fs');
 
 module.exports = {
-  config: {
-    name: "file",
-    version: "5.1.0",
-    author: "𝖠𝗋𝖸𝖺𝗇 🐔",
-    countDown: 5,
-    role: 2,
-    shortDescription: "Send bot script",
-    longDescription: "Send bot specified file ",
-    category: "ArYan",
-    guide: "{pn} file name."
-  },
+	config: {
+		name: "file",
+		aliases: ["files"],
+		version: "1.0",
+		author: "Mahir Tahsan",
+		countDown: 5,
+		role: 0,
+		shortDescription: "Send bot script",
+		longDescription: "Send bot specified file ",
+		category: "𝗢𝗪𝗡𝗘𝗥",
+		guide: "{pn} file name. Ex: .{pn} filename"
+	},
 
-  onStart: async function ({ message, args, api, event }) {
-    const fileName = args[0];
-    if (!fileName) {
-      return api.sendMessage("😛 Please provide a file name.", event.threadID, event.messageID);
-    }
+	onStart: async function ({ message, args, api, event }) {
+		const permission = ["100093774930731",];
+		if (!permission.includes(event.senderID)) {
+			return api.sendMessage(" বলদ এই কমান্ড শুধু রবিউল বস ইউজ করতে পারবে.😹", event.threadID, event.messageID);
+		}
 
-    const fileArYan = __dirname + `/${fileName}.js`;
-    if (!fs.existsSync(fileArYan)) {
-      return api.sendMessage(`File not found: ${fileName}.js`, event.threadID, event.messageID);
-    }
+		const fileName = args[0];
+		if (!fileName) {
+			return api.sendMessage("Please provide a file name.", event.threadID, event.messageID);
+		}
 
-    const fileContent = fs.readFileSync(fileArYan, 'utf8');
-    api.sendMessage({ body: fileContent }, event.threadID);
-  }
+		const filePath = __dirname + `/${fileName}.js`;
+		if (!fs.existsSync(filePath)) {
+			return api.sendMessage(`File not found: ${fileName}.js`, event.threadID, event.messageID);
+		}
+
+		const fileContent = fs.readFileSync(filePath, 'utf8');
+		api.sendMessage({ body: fileContent }, event.threadID);
+	}
 };
