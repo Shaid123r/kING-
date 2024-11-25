@@ -11,7 +11,6 @@
     category: "18+",
     guide: "{pn}"
   },
-
   onStart: async function ({ message }) {
    var link = [ "https://i.imgur.com/z0kyrlb.mp4",
 "https://i.imgur.com/17nXn9K.mp4",
@@ -39,7 +38,6 @@
 "https://i.imgur.com/FbnZI40.mp4",
 "https://i.imgur.com/wkLsGAj.mp4"
 ]
-
 let img = link[Math.floor(Math.random()*link.length)]
 message.send({
   body: '「 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\n𝗠𝗗 𝗝𝗨𝗕𝗔𝗘𝗗 𝗔𝗛𝗠𝗘𝗗 𝗝𝗢𝗬」',attachment: await global.utils.getStreamFromURL(img)
